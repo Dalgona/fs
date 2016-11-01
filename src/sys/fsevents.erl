@@ -2,8 +2,7 @@
 -include("api.hrl").
 -export(?API).
 
-find_executable() ->
-    fs:find_executable("mac_listener", "deps/fs/priv/mac_listener").
+find_executable() -> os:find_executable("fsevent_watch").
 
 known_events() ->
     [mustscansubdirs,userdropped,kerneldropped,eventidswrapped,historydone,rootchanged,
